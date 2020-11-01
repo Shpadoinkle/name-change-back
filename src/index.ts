@@ -50,7 +50,7 @@ const bootstrap = async () => {
   apolloServer = new ApolloServer({
     schema,
     introspection: !isProd,
-    playground: !isProd,
+    playground: true,
     context: async ({ctx, connection}) => {
       // console.log("ctx", ctx);
       // console.log("connection", connection);
