@@ -35,7 +35,7 @@ export default class SessionMutationsResolver {
 
     let nameAlreadyExists = await this.nameRepository.findOne({
       where: {
-        name: input.name.toLowerCase(),
+        string: input.name.toLowerCase(),
       },
     })
 
