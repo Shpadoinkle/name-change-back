@@ -20,7 +20,7 @@ export default class NameQueriesResolver {
         expiresAt: LessThanOrEqual(checkTime),
       },
       order: {
-        expiresAt: 'DESC',
+        expiresAt: 'ASC',
       },
     })
 
