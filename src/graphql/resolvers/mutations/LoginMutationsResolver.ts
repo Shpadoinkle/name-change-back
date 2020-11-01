@@ -26,16 +26,12 @@ export default class LoginMutationsResolver {
     })
 
     if (!user) {
-      throw new Error(
-        'Incorrect login details, please try again or use the link below to reset your password.'
-      )
+      throw new Error('Incorrect login details')
     }
 
     const match = await compare(input.password, user.passwordHash)
     if (!match) {
-      throw new Error(
-        'Incorrect login details, please try again or use the link below to reset your password.'
-      )
+      throw new Error('Incorrect login details')
     }
 
     const token = sign({user}, process.env.JWT_SECRET, {
