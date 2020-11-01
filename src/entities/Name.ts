@@ -1,4 +1,4 @@
-import {Field, ObjectType} from 'type-graphql'
+import {Field, ID, ObjectType} from 'type-graphql'
 import {
   Column,
   CreateDateColumn,
@@ -13,6 +13,7 @@ import User from './User'
 @Entity()
 @ObjectType()
 export default class Name {
+  @Field((type) => ID)
   @PrimaryGeneratedColumn('uuid')
   readonly id: string
 
