@@ -162,3 +162,4 @@ export async function bootstrap() {
     console.error(err)
   }
 }
+bootstrap()
