@@ -49,7 +49,7 @@ const bootstrap = async () => {
   // Create GraphQL server
   apolloServer = new ApolloServer({
     schema,
-    introspection: !isProd,
+    introspection: true,
     playground: true,
     context: async ({ctx, connection}) => {
       // console.log("ctx", ctx);
