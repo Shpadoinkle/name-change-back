@@ -41,8 +41,11 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node ./index.ts",
+    "start": "app.js",
     "dev": "ts-node-dev ./index.ts"
+  },
+  "engines": {
+    "node": "12.13.1"
   },
   "author": "",
   "license": "ISC"
